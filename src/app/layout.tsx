@@ -3,6 +3,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import { NavigationBar } from "@/components/navigation-bat";
 import { PlayerBar } from "../components/player-bar";
+import { PlayerProvider } from "@/context/player-provider";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -21,10 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rubik.variable}  flex flex-col lg:flex-row`}>
-        <NavigationBar />
-        {children}
-        <PlayerBar />
+      <body
+        className={`${rubik.variable}  flex flex-col lg:flex-row bg-gray-100`}
+      >
+        <PlayerProvider>
+          <NavigationBar />
+          {children}
+          <PlayerBar />
+        </PlayerProvider>
       </body>
     </html>
   );

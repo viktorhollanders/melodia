@@ -14,7 +14,7 @@ export async function getMusic(query: string): Promise<Track[]> {
   return data.results;
 }
 
-export async function getAlbum(id: string): Promise<Track> {
+export async function getAlbum(id: string) {
   const searchUrl = `${baseUrl}/lookup?id=${id}&entity=song`;
   const response = await fetch(searchUrl);
 
