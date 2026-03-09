@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
-import { NavigationBar } from "@/app/components/navigation-bat";
+import { NavigationBar } from "@/components/navigation-bat";
+import { PlayerBar } from "../components/player-bar";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${rubik.variable}  flex flex-col lg:flex-row`}>
         <NavigationBar />
         {children}
+        <PlayerBar />
       </body>
     </html>
   );
