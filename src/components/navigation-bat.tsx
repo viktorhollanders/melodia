@@ -16,9 +16,9 @@ export function NavigationBar() {
         </Link>
         <Link
           className="font-bold text-blue-600 hover:text-blue-800"
-          href="/favorites"
+          href="/about"
         >
-          Favorites
+          About
         </Link>
       </div>
     </nav>

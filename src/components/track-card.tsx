@@ -9,11 +9,7 @@ export function TrackCard(props: Track) {
   return (
     <div className="flex flex-col gap-4 items-center bg-white p-6 rounded-2xl border border-gray-300">
       <div className="relative">
-        <div className="absolute h-full w-full flex flex-col items-center gap-12 pointer-events-none">
-          <Heart
-            className="text-blue-600 self-end mr-2 mt-2 hover:fill-blue-200 pointer-events-auto"
-            size={24}
-          />
+        <div className="absolute h-full w-full flex flex-row items-center justify-center pointer-events-none">
           <button
             onClick={() => setCurrentTrack(props)}
             className="border-2 border-blue-600 rounded-4xl  hover:bg-blue-200 h-12 w-12 flex items-center justify-center pointer-events-auto"
@@ -35,7 +31,9 @@ export function TrackCard(props: Track) {
       <div className="flex flex-col gap-2">
         <h1 className="text-center text-xl font-bold">{props.trackName}</h1>
         <h2 className="text-center ">{props.artistName}</h2>
-        <h2 className="text-center font-semibold">{props.collectionName}</h2>
+        <Link href={`album/${props.collectionId}`}>
+          <h2 className="text-center font-semibold">{props.collectionName}</h2>
+        </Link>
       </div>
     </div>
   );

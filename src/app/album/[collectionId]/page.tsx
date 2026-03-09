@@ -38,7 +38,7 @@ export default function Page({
         </h1>
       ) : (
         <div className="flex flex-row m-12">
-          <div className="flex flex-col gap-x-4 mr-12">
+          <div className="flex flex-col gap-y-4 mr-12">
             <img
               className="rounded-xl"
               src={collection?.artworkUrl100}
@@ -49,7 +49,7 @@ export default function Page({
             <h1 className="text-2xl font-bold text-center">
               {collection?.artistName}
             </h1>
-            <h1 className="text-2xl text-center">
+            <h1 className="text-2xl text-center text-gray-400">
               {collection?.collectionName}
             </h1>
           </div>
